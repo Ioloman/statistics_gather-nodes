@@ -1,0 +1,21 @@
+{
+    "name": "test_device-abatgB21",
+    "send_every": 30,
+    "save_every": 5,
+    "fields": {
+        "temp": {
+            "x_from": -10,
+            "x_to": 20,
+            "x_step": 1,
+            "x_start": 0,
+            "y": "(0.5 * x) ** 2"
+        },
+        "speed": {
+            "x_from": -1,
+            "x_to": 1,
+            "x_step": 0.1,
+            "x_start": 0,
+            "y": "math.sin(x)"
+        }
+    }
+}

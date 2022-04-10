@@ -1,0 +1,28 @@
+{
+    "name": "frigde_228",
+    "send_every": "1h",
+    "save_every": 5,
+    "fields": {
+        "temperature": {
+            "x_from": 0,
+            "x_to": 5,
+            "x_step": 1,
+            "x_start": 0,
+            "y": "x"
+        },
+        "ice_volume": {
+            "x_from": 0,
+            "x_to": 20,
+            "x_step": -2,
+            "x_start": 20,
+            "y": "x ** 2"
+        },
+        "freezer_temperature": {
+            "x_from": -20,
+            "x_to": 0,
+            "x_step": 3,
+            "x_start": -10,
+            "y": "x"
+        }
+    }
+}
