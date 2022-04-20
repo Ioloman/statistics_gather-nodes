@@ -16,7 +16,6 @@ async def sending_callback(data: dict, url: str, interval: int):
         await asyncio.sleep(interval)
         data_to_send = deepcopy(data)
         data['time_series'].clear()
-        print('sending data')
         async with aiohttp.ClientSession() as session:
             async with session.post(url, json=data_to_send) as response:
                 print(await response.json())
@@ -39,8 +38,8 @@ async def main():
         config = json.load(file)
 
     name = config['name']
-    url = os.getenv('SERVER_URL')
-    
+    url = os.getenv('SERVER_URL') + '/api/send_data'
+
     save_interval = parse_time(config['save_every'])
     send_interval = parse_time(config['send_every'])
 
